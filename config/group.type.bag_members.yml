@@ -1,0 +1,12 @@
+uuid: 50ae4000-5446-4353-ab45-69a980adcc46
+langcode: en
+status: true
+dependencies: {  }
+id: bag_members
+label: 'Bag Members'
+description: ''
+new_revision: true
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - bag_members-individual

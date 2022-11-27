@@ -1,0 +1,18 @@
+uuid: d66ab0c2-1aa6-499f-86e5-5a2d2cecf9a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.bag_members
+id: group.bag_members.label
+field_name: label
+entity_type: group
+bundle: bag_members
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

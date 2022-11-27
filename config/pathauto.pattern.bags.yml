@@ -1,0 +1,22 @@
+uuid: 7e094cb7-2258-433a-a98c-3e3450538543
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: bags
+label: Bags
+type: 'canonical_entities:node'
+pattern: 'bag/[node:author]/[node:title]'
+selection_criteria:
+  980482d5-d9c9-4616-a9b6-5a2d4af3f213:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 980482d5-d9c9-4616-a9b6-5a2d4af3f213
+    context_mapping:
+      node: node
+    bundles:
+      bag: bag
+selection_logic: and
+weight: -5
+relationships: {  }

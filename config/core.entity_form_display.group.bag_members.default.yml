@@ -1,0 +1,47 @@
+uuid: 37171fed-d7f4-44ad-a2c2-f7ba47098a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.bag_members.field_bag
+    - group.type.bag_members
+  module:
+    - path
+id: group.bag_members.default
+targetEntityType: group
+bundle: bag_members
+mode: default
+content:
+  field_bag:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  uid: true

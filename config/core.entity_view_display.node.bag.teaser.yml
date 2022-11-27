@@ -1,0 +1,36 @@
+uuid: e1b17da4-1ac9-48bf-af27-3848d0ae76b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bag.body
+    - field.field.node.bag.field_bag_type
+    - field.field.node.bag.field_list
+    - field.field.node.bag.field_tags
+    - node.type.bag
+  module:
+    - text
+    - user
+id: node.bag.teaser
+targetEntityType: node
+bundle: bag
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bag_type: true
+  field_list: true
+  field_tags: true

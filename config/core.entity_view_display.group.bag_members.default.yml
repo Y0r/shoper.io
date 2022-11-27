@@ -1,0 +1,48 @@
+uuid: db0f9c22-27e3-4976-b54a-6885d24bb2c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.bag_members.field_bag
+    - group.type.bag_members
+id: group.bag_members.default
+targetEntityType: group
+bundle: bag_members
+mode: default
+content:
+  created:
+    type: timestamp
+    label: inline
+    settings:
+      date_format: olivero_medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_bag:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  label:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  changed: true

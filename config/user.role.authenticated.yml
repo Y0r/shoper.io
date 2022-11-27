@@ -1,0 +1,40 @@
+uuid: 0012c528-09f8-4721-949c-cd72711d14f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.bag
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contact
+    - filter
+    - group
+    - node
+    - search
+    - shortcut
+    - system
+    - taxonomy
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'change own username'
+  - 'create bag content'
+  - 'create bag_members group'
+  - 'create terms in tags'
+  - 'delete own bag content'
+  - 'edit own bag content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

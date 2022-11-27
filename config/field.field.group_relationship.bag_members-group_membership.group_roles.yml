@@ -1,0 +1,22 @@
+uuid: f2d68c0b-163d-4dc9-88da-269bd3aca1f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_relationship.group_roles
+    - group.relationship_type.bag_members-group_membership
+id: group_relationship.bag_members-group_membership.group_roles
+field_name: group_roles
+entity_type: group_relationship
+bundle: bag_members-group_membership
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'group_type:group_role'
+  handler_settings:
+    group_type_id: bag_members
+field_type: entity_reference

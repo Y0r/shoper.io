@@ -1,0 +1,23 @@
+uuid: e16c9cc3-14c6-46ba-bac8-e2e43a62ec81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_status
+    - paragraphs.paragraphs_type.bag_list_item
+  module:
+    - options
+id: paragraph.bag_list_item.field_status
+field_name: field_status
+entity_type: paragraph
+bundle: bag_list_item
+label: Status
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: waiting
+default_value_callback: ''
+settings: {  }
+field_type: list_string

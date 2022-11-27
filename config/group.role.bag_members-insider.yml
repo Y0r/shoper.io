@@ -1,0 +1,16 @@
+uuid: 8bb3f531-582e-4a6e-8467-483db0e5d6ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.bag_members
+    - user.role.authenticated
+id: bag_members-insider
+label: Insider
+weight: 2
+admin: false
+scope: insider
+global_role: authenticated
+group_type: bag_members
+permissions:
+  - 'leave group'

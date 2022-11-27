@@ -1,0 +1,31 @@
+uuid: e2c6da17-1c0a-463c-9a8f-6bdd02860d43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list
+    - node.type.bag
+    - paragraphs.paragraphs_type.bag_list_item
+  module:
+    - entity_reference_revisions
+id: node.bag.field_list
+field_name: field_list
+entity_type: node
+bundle: bag
+label: List
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bag_list_item: bag_list_item
+    negate: 0
+    target_bundles_drag_drop:
+      bag_list_item:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

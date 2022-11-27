@@ -1,0 +1,15 @@
+uuid: 5613dda6-d53a-4144-b2e6-71d2f1af3907
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.bag_members
+  module:
+    - user
+id: bag_members-group_membership
+group_type: bag_members
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

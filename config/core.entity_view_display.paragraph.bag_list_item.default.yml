@@ -1,0 +1,24 @@
+uuid: 1b633639-27d8-4b09-af4b-84610b15eeaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bag_list_item.field_body
+    - field.field.paragraph.bag_list_item.field_status
+    - paragraphs.paragraphs_type.bag_list_item
+  module:
+    - text
+id: paragraph.bag_list_item.default
+targetEntityType: paragraph
+bundle: bag_list_item
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_status: true

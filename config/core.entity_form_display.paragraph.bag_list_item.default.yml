@@ -1,0 +1,29 @@
+uuid: 6e5a40d2-4c96-43de-a645-fe92f252b05e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bag_list_item.field_body
+    - field.field.paragraph.bag_list_item.field_status
+    - paragraphs.paragraphs_type.bag_list_item
+  module:
+    - text
+id: paragraph.bag_list_item.default
+targetEntityType: paragraph
+bundle: bag_list_item
+mode: default
+content:
+  field_body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 4
+      summary_rows: 3
+      placeholder: 'Start typing...'
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_status: true
+  status: true

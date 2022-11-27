@@ -1,0 +1,14 @@
+uuid: 17024aca-5263-4595-a169-a68776c92281
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.bag_members
+id: bag_members-individual
+label: Individual
+weight: 1
+admin: true
+scope: individual
+global_role: null
+group_type: bag_members
+permissions: {  }

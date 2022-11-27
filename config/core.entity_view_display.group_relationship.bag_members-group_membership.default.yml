@@ -1,0 +1,24 @@
+uuid: 4f875508-3f98-4a35-9346-9b9b9f2ce615
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_relationship.bag_members-group_membership.group_roles
+    - group.relationship_type.bag_members-group_membership
+id: group_relationship.bag_members-group_membership.default
+targetEntityType: group_relationship
+bundle: bag_members-group_membership
+mode: default
+content:
+  entity_id:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  group_roles: true
+  uid: true

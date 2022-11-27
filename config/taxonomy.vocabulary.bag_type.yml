@@ -1,0 +1,8 @@
+uuid: 7362a6ee-4faf-4ba4-8889-a7f05ba3a6aa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bag Type'
+vid: bag_type
+description: ''
+weight: 0
