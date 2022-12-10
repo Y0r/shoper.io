@@ -1,0 +1,66 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_entity_access().
+ */
+function shp_access_entity_access(EntityInterface $entity, $operation, AccountInterface $account): AccessResult {
+  if ($entity->getEntityType() !== 'node' || $entity->bundle() !== 'bag') {
+    return AccessResult::neutral();
+  }
+
+  // Allow administrator to access all bags.
+  if ($account->hasPermission('administer site')) {
+    return AccessResult::allowed();
+  }
+
+  // Disallow removing bags by non-author users.
+  if ($account->id() !== $entity->getOwnerId() && $operation === 'delete') {
+    return AccessResult::forbidden();
+  }
+
+  /** @var \Drupal\group\Entity\GroupInterface[] $groups */
+  $groups = \Drupal::entityTypeManager()
+    ->getStorage('group')
+    ->loadByProperties([
+      'type' => 'bag_members',
+      'field_bag' => $entity->id(),
+      'status' => 1,
+    ]);
+
+  $group = reset($groups);
+
+  /** @var \Drupal\user\UserInterface $current_user */
+  $current_user = \Drupal::entityTypeManager()
+    ->getStorage('user')
+    ->load($account->id());
+
+  // Allow access to the bag if the user is a member of the group.
+  return AccessResult::allowedIf($group->getMember($current_user))->cachePerUser();
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function shp_access_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() !== 'your_bags' || $view->current_display !== 'shared_with_me') {
+    return;
+  }
+
+  $current_user = \Drupal::currentUser();
+  foreach ($query->where as $key => $where) {
+    foreach ($where['conditions'] as $condition_key => $condition) {
+      echo $condition['field'];
+      if ($condition['field'] === 'node_field_data.typenode_field_data.uid') {
+        // Display only content that is shared with the current user.
+        $query->where[$key]['conditions'][$condition_key]['value'] = $current_user->id();
+      }
+    }
+  }
+}
+
