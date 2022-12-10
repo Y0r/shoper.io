@@ -1,0 +1,23 @@
+name: 'Olivero Shopper.io'
+type: theme
+base theme: olivero
+description: 'Shopper.io base theme extended from Olivero.'
+package: Custom
+version: VERSION
+core_version_requirement: ^9 || ^10
+libraries:
+  - olivero_shopper_io/global-styling
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'

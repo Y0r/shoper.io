@@ -1,0 +1,22 @@
+uuid: f881ee61-3925-422e-97fc-3780a7f330d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: olivero_shopper_io_messages
+theme: olivero_shopper_io
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

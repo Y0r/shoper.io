@@ -1,0 +1,22 @@
+uuid: 06fbbccf-d2d5-499b-84e8-570d276765db
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: olivero_shopper_io_content
+theme: olivero_shopper_io
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

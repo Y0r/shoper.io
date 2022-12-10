@@ -1,0 +1,24 @@
+uuid: 80e6f0de-6a50-44ca-8df2-d8fe4aab9dec
+langcode: en
+status: true
+dependencies:
+  module:
+    - pwa_a2hs
+  theme:
+    - olivero_shopper_io
+id: olivero_shopper_io_pwaaddtohomescreen
+theme: olivero_shopper_io
+region: footer_top
+weight: -7
+provider: null
+plugin: pwa_add_to_home_screen
+settings:
+  id: pwa_add_to_home_screen
+  label: 'PWA Add to Home Screen'
+  label_display: '0'
+  provider: pwa_a2hs
+  button_text: 'Install Shopper.io app'
+  intro_text:
+    value: ''
+    format: basic_html
+visibility: {  }

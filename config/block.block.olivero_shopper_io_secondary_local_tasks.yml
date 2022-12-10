@@ -1,0 +1,22 @@
+uuid: a67876cb-ce8f-4392-a2c2-4338f6db3241
+langcode: en
+status: true
+dependencies:
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: olivero_shopper_io_secondary_local_tasks
+theme: olivero_shopper_io
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

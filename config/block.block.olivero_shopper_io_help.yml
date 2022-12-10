@@ -1,0 +1,22 @@
+uuid: 3910dd52-c688-4253-a3eb-6f19d23d4c3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: olivero_shopper_io_help
+theme: olivero_shopper_io
+region: content_above
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

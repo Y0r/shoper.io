@@ -1,0 +1,22 @@
+uuid: 678d6031-e5ff-4020-95e9-6d821bbeb56e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: olivero_shopper_io_breadcrumbs
+theme: olivero_shopper_io
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

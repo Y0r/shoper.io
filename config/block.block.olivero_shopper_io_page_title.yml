@@ -1,0 +1,20 @@
+uuid: c91eaebc-d543-44f4-ab95-febb66ca404e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: olivero_shopper_io_page_title
+theme: olivero_shopper_io
+region: content_above
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 363f2cb1-482a-4dda-bce4-fb577b75db22
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero_shopper_io
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: olivero_shopper_io_powered
+theme: olivero_shopper_io
+region: footer_bottom
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
