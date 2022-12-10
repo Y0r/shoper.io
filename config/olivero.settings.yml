@@ -8,9 +8,10 @@ features:
   favicon: true
   node_user_picture: false
 logo:
+  path: 'public://shopping_bag_icon_192682 (2).png'
   use_default: false
 third_party_settings:
   shortcut:
     module_link: true
 mobile_menu_all_widths: 0
-site_branding_bg_color: default
+site_branding_bg_color: gray

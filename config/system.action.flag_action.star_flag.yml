@@ -1,0 +1,15 @@
+uuid: 36e9fa7d-92b3-4e2e-9bbf-13009c04143d
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.star
+  module:
+    - flag
+id: flag_action.star_flag
+label: Follow
+type: node
+plugin: 'flag_action:star_flag'
+configuration:
+  flag_id: star
+  flag_action: flag

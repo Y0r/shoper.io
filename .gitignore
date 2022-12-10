@@ -110,8 +110,9 @@ docker-compose.yml
 mariadb-init
 
 # IDE files
-.idea
-.idea/*
+/.idea
+/.idea/*
+/.idea/shoper.io.iml
 
 # Theme files
 node_modules

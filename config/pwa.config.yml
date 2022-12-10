@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: cP1TZQyv1WdET3iepl2QoyOPK7VeO0xHm0lU_FU1Wmc
+site_name: 'Shoper.io - Create&Share shopping lists'
+short_name: Shoper.io
+description: ''
+start_url: /bags
+lang: en
+theme_color: '#2494db'
+background_color: '#f7f9fa'
+display: fullscreen
+default_image: '0'
+urls_to_cache: "/\r\n/bags\r\n/shared-with-me\r\n/starred"
+urls_to_exclude: "admin/.*\r\nuser/.*"
+offline_page: /offline
+cache_version: '1'
+cross_origin: false
+skip_waiting: false
+image: /sites/default/files/pwa/shopping_bag_icon_192682.png
+image_small: /sites/default/files/pwa/shopping_bag_icon_192682.pngcopy.png
+image_very_small: /sites/default/files/pwa/shopping_bag_icon_192682.pngcopy2.png

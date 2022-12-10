@@ -25,6 +25,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
   flexible_permissions: 0
   group: 0
   help: 0
@@ -37,13 +38,19 @@ module:
   menu_ui: 0
   mysql: 0
   node: 0
+  one_time_login_link_admin: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  pwa: 0
+  pwa_a2hs: 0
+  pwa_extras: 0
   rdf: 0
   search: 0
   shortcut: 0
+  shp_access: 0
+  statistics: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -53,6 +60,7 @@ module:
   update: 0
   user: 0
   variationcache: 0
+  views_infinite_scroll: 0
   views_ui: 0
   pathauto: 1
   views: 10

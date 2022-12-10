@@ -1,0 +1,15 @@
+uuid: 46d2aa9c-33bb-421f-b141-b54b4aa70d44
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.star
+  module:
+    - flag
+id: flag_action.star_unflag
+label: Unfollow
+type: node
+plugin: 'flag_action:star_unflag'
+configuration:
+  flag_id: star
+  flag_action: unflag

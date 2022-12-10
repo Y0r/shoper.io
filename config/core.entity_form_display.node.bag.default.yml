@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.bag.field_tags
     - node.type.bag
   module:
-    - paragraphs
     - text
 id: node.bag.default
 targetEntityType: node
@@ -28,32 +27,13 @@ content:
     third_party_settings: {  }
   field_bag_type:
     type: options_select
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_list:
-    type: paragraphs
-    weight: 2
-    region: content
-    settings:
-      title: 'List Item'
-      title_plural: 'List Items'
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: button
-      form_display_mode: default
-      default_paragraph_type: bag_list_item
-      features:
-        add_above: '0'
-        collapse_edit_all: '0'
-        duplicate: '0'
-    third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 4
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -61,9 +41,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  sticky:
+  status:
     type: boolean_checkbox
     weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 4
     region: content
     settings:
       display_label: true
@@ -78,7 +65,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_list: true
   path: true
   promote: true
-  status: true
   uid: true

@@ -1,0 +1,31 @@
+uuid: 3d0f05a4-d371-4f1d-96e6-cea2d8bca285
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: star
+label: Star
+bundles:
+  - bag
+entity_type: node
+global: false
+flag_short: Follow
+flag_long: ''
+flag_message: 'Content added to following list!'
+unflag_short: Unfollow
+unflag_long: ''
+unflag_message: 'Content removed from following list!'
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }
