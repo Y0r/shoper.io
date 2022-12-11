@@ -11,6 +11,7 @@ dependencies:
     - flag
     - node
     - statistics
+    - taxonomy
     - user
     - views_infinite_scroll
 id: your_bags
@@ -68,7 +69,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: div
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -133,7 +134,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: div
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -338,9 +339,24 @@ display:
           empty: true
           content:
             value: "<div class=\"view-no-results\">\r\n<div class=\"empty-bag-icon\"></div>\r\n<div class=\"no-results-text\">You have no bags in this list</div>\r\n<div class=\"no-results-text\">Click <a href=\"/node/add/bag\">here</a> to add one</div>\r\n</div>"
-            format: basic_html
+            format: full_html
           tokenize: false
       sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_bag_type
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         promote:
           id: promote
           table: node_field_data
@@ -447,16 +463,16 @@ display:
             -
               field: status
               rendered: true
-              rendered_strip: true
+              rendered_strip: false
             -
               field: field_bag_type
               rendered: true
-              rendered_strip: true
-          row_class: ''
+              rendered_strip: false
+          row_class: row-class
           default_row_class: true
           type: ul
           wrapper_class: item-list
-          class: ''
+          class: list-class
       row:
         type: fields
       query:
@@ -467,11 +483,20 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_bag_type:
+          id: field_bag_type
+          table: node__field_bag_type
+          field: field_bag_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_bag_type: Taxonomy term'
+          plugin_id: standard
+          required: true
       css_class: your-bags-list
       use_ajax: true
       use_more: true
-      use_more_always: true
+      use_more_always: false
       use_more_text: more
       header: {  }
       footer:
@@ -486,7 +511,7 @@ display:
           empty: false
           content:
             value: "<div class=\"view-footer floating-button\">\r\n<div class=\"link-inner\"><a href=\"/node/add/bag\">Add Bag</a></div>\r\n</div>"
-            format: basic_html
+            format: full_html
           tokenize: false
       display_extenders: {  }
     cache_metadata:
@@ -578,6 +603,15 @@ display:
           admin_label: User
           entity_type: node
           entity_field: uid
+          plugin_id: standard
+          required: true
+        field_bag_type:
+          id: field_bag_type
+          table: node__field_bag_type
+          field: field_bag_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_bag_type: Taxonomy term'
           plugin_id: standard
           required: true
       display_description: ''
@@ -708,6 +742,15 @@ display:
           required: true
           flag: star
           user_scope: current
+        field_bag_type:
+          id: field_bag_type
+          table: node__field_bag_type
+          field: field_bag_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_bag_type: Taxonomy term'
+          plugin_id: standard
+          required: true
       display_description: ''
       display_extenders: {  }
       path: starred

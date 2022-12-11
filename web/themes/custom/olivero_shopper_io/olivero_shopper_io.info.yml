@@ -19,5 +19,5 @@ regions:
   content: Content
   sidebar: 'Sidebar'
   content_below: 'Content Below'
-  footer_top: 'Footer Top'
-  footer_bottom: 'Footer Bottom'
+  footer_top: 'Footer Left'
+  footer_bottom: 'Footer Right'

@@ -2,5 +2,252 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/view.scss ***!
   \*************************************************************************************************************/
 .view .view-content {
-  background-color: red;
+  /*** FONTS ***/
+  @import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+  /*** EXTEND ***/
+  /* box-shadow */
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list::before, .view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list, .view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list::before, .view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping .item-list {
+  padding-top: 0;
+  margin-bottom: 1.6rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping .item-list ul.list-class {
+  list-style: none;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping .item-list ul.list-class li.row-class {
+  margin-bottom: 1.3rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping .item-list ul.list-class li.row-class a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #190c05;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content {
+  /*** VARIABLES ***/
+  /* Colors */
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 0 1rem 1rem 3rem;
+  position: relative;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list::before, .view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list::after {
+  background: linear-gradient(135deg, #00008B 0%, #2494db 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: "";
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list::before {
+  align-items: flex-end;
+  content: counter(gradient-counter);
+  color: #1d1f20;
+  display: flex;
+  font: 900 1.5em/1 "Montserrat";
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+1):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.2) 0%, rgba(247, 249, 250, 0.2) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+2):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.4) 0%, rgba(247, 249, 250, 0.4) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+3):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.6) 0%, rgba(247, 249, 250, 0.6) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+4):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.8) 0%, rgba(247, 249, 250, 0.8) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+5):before {
+  background: linear-gradient(135deg, #2494db 0%, #f7f9fa 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+6):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.8) 0%, rgba(247, 249, 250, 0.8) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+7):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.6) 0%, rgba(247, 249, 250, 0.6) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+8):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.4) 0%, rgba(247, 249, 250, 0.4) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+9):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0.2) 0%, rgba(247, 249, 250, 0.2) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list:nth-child(10n+10):before {
+  background: linear-gradient(135deg, rgba(36, 148, 219, 0) 0%, rgba(247, 249, 250, 0) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-active .view-grouping-content > .item-list + .item-list {
+  margin-top: 2rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content {
+  /*** VARIABLES ***/
+  /* Colors */
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 0 1rem 1rem 3rem;
+  position: relative;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list::before, .view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list::after {
+  background: linear-gradient(135deg, #a2ed56 0%, #FFA500 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: "";
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list::before {
+  align-items: flex-end;
+  content: counter(gradient-counter);
+  color: #1d1f20;
+  display: flex;
+  font: 900 1.5em/1 "Montserrat";
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+1):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+2):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+3):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+4):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+5):before {
+  background: linear-gradient(135deg, orange 0%, #fddc32 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+6):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+7):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+8):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+9):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list:nth-child(10n+10):before {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0) 0%, rgba(253, 220, 50, 0) 100%);
+}
+.view .view-content .views-infinite-scroll-content-wrapper .view-grouping.view-grouping-inactive .view-grouping-content > .item-list + .item-list {
+  margin-top: 2rem;
+}
+.view .view-footer.floating-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 15.5%;
+  bottom: 30%;
+  z-index: 999;
+}
+.view .view-footer.floating-button a {
+  font-size: 0;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: inline-block;
+  background: linear-gradient(white 0 0), linear-gradient(white 0 0);
+  background-size: 50% 8px, 8px 50%; /*thickness = 2px, length = 50% (25px)*/
+  background-color: #4CAF50;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 500;
+}
+.view .view-footer.floating-button a:hover {
+  cursor: pointer;
+  background-color: #4CAF50; /* Green but darker */
+}
+.view .view-footer.floating-button a, .view .view-footer.floating-button a:hover, .view .view-footer.floating-button a:active {
+  outline: none;
+}
+.view .view-empty .view-no-results .empty-bag-icon {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  background-image: url(2e8633126c1b9b46bffd.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.view .view-empty .view-no-results .no-results-text {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+  color: #190c05;
+}
+.view .view-empty .view-no-results .no-results-text a {
+  color: #190c05;
+  text-decoration: underline #190c05 3px;
+}
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/pwa.scss ***!
+  \************************************************************************************************************/
+.block-pwa-add-to-home-screen .pwa-a2hs-active button {
+  font-size: 16px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #4CAF50; /* Green */
+}
+.block-pwa-add-to-home-screen .pwa-a2hs-active button:hover {
+  cursor: pointer;
+  border: white 2px solid;
+  background-color: #4CAF60; /* Green but darker */
+}
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/page.scss ***!
+  \*************************************************************************************************************/
+.site-footer .site-footer__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 7rem;
+}
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/link.scss ***!
+  \*************************************************************************************************************/
+a {
+  font-size: inherit;
+  outline: none;
+  text-decoration: none;
 }

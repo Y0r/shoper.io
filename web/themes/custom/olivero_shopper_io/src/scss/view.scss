@@ -1,5 +1,226 @@
 .view {
   .view-content {
-    background-color: red;
+    /*** FONTS ***/
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
+    /*** EXTEND ***/
+    /* box-shadow */
+    %boxshadow {
+      box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    }
+
+    .views-infinite-scroll-content-wrapper {
+
+      .view-grouping {
+        .item-list {
+          padding-top: 0;
+          margin-bottom: 1.6rem;
+
+          ul.list-class {
+            list-style: none;
+
+            li.row-class {
+              margin-bottom: 1.3rem;
+
+              a {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: #190c05;
+              }
+            }
+          }
+        }
+
+        &.view-grouping-active .view-grouping-content{
+          /*** VARIABLES ***/
+          /* Colors */
+          $black: #1d1f20;
+          $blue: #00008B;
+          $green: #2494db;
+          $yellow: #f7f9fa;
+          $white: #fafafa;
+
+          counter-reset: gradient-counter;
+          list-style: none;
+          margin: 1.75rem 0;
+          padding-left: 1rem;
+
+          > .item-list {
+            background: white;
+            border-radius: 0 0.5rem 0.5rem 0.5rem;
+            @extend %boxshadow;
+            counter-increment: gradient-counter;
+            margin-top: 1rem;
+            min-height: 3rem;
+            padding: 0 1rem 1rem 3rem;
+            position: relative;
+
+            &::before,
+            &::after {
+              background: linear-gradient(135deg, $blue 0%,$green 100%);
+              border-radius: 1rem 1rem 0 1rem;
+              content: '';
+              height: 3rem;
+              left: -1rem;
+              overflow: hidden;
+              position: absolute;
+              top: -1rem;
+              width: 3rem;
+            }
+
+            &::before {
+              align-items: flex-end;
+              @extend %boxshadow;
+              content: counter(gradient-counter);
+              color: $black;
+              display: flex;
+              font: 900 1.5em/1 'Montserrat';
+              justify-content: flex-end;
+              padding: 0.125em 0.25em;
+              z-index: 1;
+            }
+
+            @for $i from 1 through 5 {
+              &:nth-child(10n+#{$i}):before {
+                background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+              }
+            }
+
+            @for $i from 6 through 10 {
+              &:nth-child(10n+#{$i}):before {
+                background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+              }
+            }
+            + .item-list {
+              margin-top: 2rem;
+            }
+          }
+        }
+
+        &.view-grouping-inactive .view-grouping-content{
+          /*** VARIABLES ***/
+          /* Colors */
+          $black: #1d1f20;
+          $blue: #a2ed56;
+          $green: #FFA500;
+          $yellow: #fddc32;
+          $white: #fafafa;
+
+          counter-reset: gradient-counter;
+          list-style: none;
+          margin: 1.75rem 0;
+          padding-left: 1rem;
+
+          > .item-list {
+            background: white;
+            border-radius: 0 0.5rem 0.5rem 0.5rem;
+            @extend %boxshadow;
+            counter-increment: gradient-counter;
+            margin-top: 1rem;
+            min-height: 3rem;
+            padding: 0 1rem 1rem 3rem;
+            position: relative;
+
+            &::before,
+            &::after {
+              background: linear-gradient(135deg, $blue 0%,$green 100%);
+              border-radius: 1rem 1rem 0 1rem;
+              content: '';
+              height: 3rem;
+              left: -1rem;
+              overflow: hidden;
+              position: absolute;
+              top: -1rem;
+              width: 3rem;
+            }
+
+            &::before {
+              align-items: flex-end;
+              @extend %boxshadow;
+              content: counter(gradient-counter);
+              color: $black;
+              display: flex;
+              font: 900 1.5em/1 'Montserrat';
+              justify-content: flex-end;
+              padding: 0.125em 0.25em;
+              z-index: 1;
+            }
+
+            @for $i from 1 through 5 {
+              &:nth-child(10n+#{$i}):before {
+                background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+              }
+            }
+
+            @for $i from 6 through 10 {
+              &:nth-child(10n+#{$i}):before {
+                background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+              }
+            }
+            + .item-list {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .view-footer.floating-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 15.5%; bottom: 30%;
+    z-index: 999;
+
+    a {
+      font-size: 0;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      display: inline-block;
+
+      background: linear-gradient(white 0 0), linear-gradient(white 0 0);
+      background-size: 50% 8px, 8px 50%; /*thickness = 2px, length = 50% (25px)*/
+
+      background-color: #4CAF50;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 500;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #4CAF50; /* Green but darker */
+      }
+      &, &:hover, &:active {
+        outline: none;
+      }
+    }
+  }
+
+  .view-empty {
+    .view-no-results {
+      .empty-bag-icon {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        background-image: url(~/src/icons/empty-bag.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .no-results-text {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0;
+        color: #190c05;
+
+        a {
+          color: #190c05;
+          text-decoration: underline #190c05 3px;
+        }
+      }
+    }
   }
 }

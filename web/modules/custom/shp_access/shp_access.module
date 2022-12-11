@@ -55,8 +55,7 @@ function shp_access_views_query_alter(ViewExecutable $view, QueryPluginBase $que
   $current_user = \Drupal::currentUser();
   foreach ($query->where as $key => $where) {
     foreach ($where['conditions'] as $condition_key => $condition) {
-      echo $condition['field'];
-      if ($condition['field'] === 'node_field_data.typenode_field_data.uid') {
+      if ($condition['field'] === 'node_field_data.uid') {
         // Display only content that is shared with the current user.
         $query->where[$key]['conditions'][$condition_key]['value'] = $current_user->id();
       }
