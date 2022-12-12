@@ -1,0 +1,63 @@
+.layout.layout--twocol-section--67-33 {
+  .flag-star {
+    display: block;
+    width: 100%;
+
+    a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      color: #3399FF;
+      font-family: "Helvetica";
+      font-size: 1.4rem;
+      padding: 0.6rem 0;
+      background-color: #ffffff;
+      border: 1px solid;
+      border-color: #3399FF;
+      border-radius: 3px;
+      cursor: hand;
+    }
+  }
+
+  .view-group-members-grid {
+    .view-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .view-content {
+      .field--name-user-picture img {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: auto;
+      }
+    }
+  }
+
+  .block-shp-share-group-members-block {
+    .form-item__label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .form-text {
+      width: 100%;
+    }
+
+    .form-item__description {
+      font-size: 0.7rem;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+}
+
+.field--name-body {
+  margin-bottom: 3rem;
+}
+.field--tags {
+  margin: 0!important;
+}

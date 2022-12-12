@@ -1,17 +1,18 @@
-uuid: 55cdb088-b5a9-4966-8f6e-b1026abb455f
+uuid: 79b17c3b-4ed4-4495-a69b-2b3a90a0e1fa
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.user.compact
   module:
-    - group
-    - node
-id: bag_members_list
-label: 'Bag Members List'
+    - user
+id: group_members_grid
+label: 'Group Members'
 module: views
-description: 'List of the bad members'
+description: ''
 tag: ''
-base_table: group_relationship_field_data
-base_field: id
+base_table: users_field_data
+base_field: uid
 display:
   default:
     id: default
@@ -19,46 +20,28 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Members
+      title: 'Group Members'
       fields:
-        label:
-          id: label
-          table: group_relationship_field_data
-          field: label
+        name:
+          id: name
+          table: users_field_data
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: null
-          entity_field: label
+          entity_type: user
+          entity_field: name
           plugin_id: field
           label: ''
           exclude: false
           alter:
             alter_text: false
-            text: ''
             make_link: false
-            path: ''
             absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
+            word_boundary: false
+            ellipsis: false
             strip_tags: false
             trim: false
-            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
@@ -73,7 +56,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: user_name
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -101,47 +84,62 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access user profiles'
       cache:
         type: tag
         options: {  }
-      empty: {  }
-      sorts:
-        uid:
-          id: uid
-          table: group_relationship_field_data
-          field: uid
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: group_relationship
-          entity_field: uid
-          plugin_id: standard
+          plugin_id: text
+          empty: true
+          content:
+            value: 'There are no users that have access to this bag'
+            format: basic_html
+          tokenize: false
+      sorts:
+        created:
+          id: created
+          table: users_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: created
+          plugin_id: date
           order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
+          granularity: second
       arguments:
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: field_bag
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
-          default_action: default
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_uid
+          default_action: empty
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: false
           title: ''
-          default_argument_type: node
+          default_argument_type: current_user
           default_argument_options: {  }
           default_argument_skip_url: false
           summary_options:
@@ -155,20 +153,37 @@ display:
             format: default_summary
           specify_validation: true
           validate:
-            type: 'entity:node_type'
-            fail: 'not found'
+            type: 'entity:user'
+            fail: empty
           validate_options:
-            bundles: {  }
-            access: true
+            access: false
             operation: view
-            multiple: 0
-          break_phrase: false
+            multiple: 1
+            restrict_roles: false
+            roles: {  }
+          break_phrase: true
           not: false
-      filters: {  }
+      filters:
+        status:
+          id: status
+          table: users_field_data
+          field: status
+          entity_type: user
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
       style:
         type: grid
       row:
-        type: 'entity:group_relationship'
+        type: 'entity:user'
+        options:
+          relationship: none
+          view_mode: compact
       query:
         type: views_query
         options:
@@ -177,38 +192,21 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        gid:
-          id: gid
-          table: group_relationship_field_data
-          field: gid
-          relationship: none
-          group_type: group
-          admin_label: Group
-          entity_type: group_relationship
-          entity_field: gid
-          plugin_id: standard
-          required: true
-        field_bag:
-          id: field_bag
-          table: group__field_bag
-          field: field_bag
-          relationship: gid
-          group_type: group
-          admin_label: 'Bag (Content)'
-          plugin_id: standard
-          required: false
+      relationships: {  }
       header:
-        result:
-          id: result
+        area:
+          id: area
           table: views
-          field: result
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: result
+          plugin_id: text
           empty: false
-          content: 'Displaying @end of @total'
+          content:
+            value: 'Members:'
+            format: basic_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -217,14 +215,15 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
+        - user.permissions
       tags: {  }
-  list_block:
-    id: list_block
-    display_title: 'List Block'
+  grid:
+    id: grid
+    display_title: Block
     display_plugin: block
     position: 1
     display_options:
-      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -232,4 +231,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
+        - user.permissions
       tags: {  }

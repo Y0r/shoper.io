@@ -10,38 +10,47 @@ use Drupal\views\ViewExecutable;
  * Implements hook_entity_access().
  */
 function shp_access_entity_access(EntityInterface $entity, $operation, AccountInterface $account): AccessResult {
-  if ($entity->getEntityType() !== 'node' || $entity->bundle() !== 'bag') {
-    return AccessResult::neutral();
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'bag') {
+    // Allow administrator to access all bags.
+    if ($account->hasPermission('administer site')) {
+      return AccessResult::allowed();
+    }
+
+    if ($account->id() === $entity->getOwnerId()) {
+      return AccessResult::allowed();
+    }
+    else {
+      // Disallow removing bags by non-author users.
+      if ($operation === 'delete') {
+        return AccessResult::forbidden();
+      }
+    }
+
+    /** @var \Drupal\group\Entity\GroupInterface[] $groups */
+    $groups = \Drupal::entityTypeManager()
+      ->getStorage('group')
+      ->loadByProperties([
+        'type' => 'bag_members',
+        'field_bag' => $entity->id(),
+        'status' => 1,
+      ]);
+
+    $group = reset($groups);
+
+    if (empty($group)) {
+      return AccessResult::forbidden();
+    }
+
+    /** @var \Drupal\user\UserInterface $current_user */
+    $current_user = \Drupal::entityTypeManager()
+      ->getStorage('user')
+      ->load($account->id());
+
+    // Allow access to the bag if the user is a member of the group.
+    return AccessResult::allowedIf($group->getMember($current_user));
   }
 
-  // Allow administrator to access all bags.
-  if ($account->hasPermission('administer site')) {
-    return AccessResult::allowed();
-  }
-
-  // Disallow removing bags by non-author users.
-  if ($account->id() !== $entity->getOwnerId() && $operation === 'delete') {
-    return AccessResult::forbidden();
-  }
-
-  /** @var \Drupal\group\Entity\GroupInterface[] $groups */
-  $groups = \Drupal::entityTypeManager()
-    ->getStorage('group')
-    ->loadByProperties([
-      'type' => 'bag_members',
-      'field_bag' => $entity->id(),
-      'status' => 1,
-    ]);
-
-  $group = reset($groups);
-
-  /** @var \Drupal\user\UserInterface $current_user */
-  $current_user = \Drupal::entityTypeManager()
-    ->getStorage('user')
-    ->load($account->id());
-
-  // Allow access to the bag if the user is a member of the group.
-  return AccessResult::allowedIf($group->getMember($current_user))->cachePerUser();
+  return AccessResult::neutral();
 }
 
 /**

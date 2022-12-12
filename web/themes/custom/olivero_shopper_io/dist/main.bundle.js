@@ -50,13 +50,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/scss/widget.scss":
+/*!******************************!*\
+  !*** ./src/scss/widget.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://wb/./src/scss/widget.scss?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_view_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/view.scss */ \"./src/scss/view.scss\");\n/* harmony import */ var _scss_pwa_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/pwa.scss */ \"./src/scss/pwa.scss\");\n/* harmony import */ var _scss_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/page.scss */ \"./src/scss/page.scss\");\n/* harmony import */ var _scss_link_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/link.scss */ \"./src/scss/link.scss\");\n\n\n\n\n\n\n//# sourceURL=webpack://wb/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_view_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/view.scss */ \"./src/scss/view.scss\");\n/* harmony import */ var _scss_pwa_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/pwa.scss */ \"./src/scss/pwa.scss\");\n/* harmony import */ var _scss_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/page.scss */ \"./src/scss/page.scss\");\n/* harmony import */ var _scss_link_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/link.scss */ \"./src/scss/link.scss\");\n/* harmony import */ var _scss_widget_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/widget.scss */ \"./src/scss/widget.scss\");\n\n\n\n\n\n\n\n//# sourceURL=webpack://wb/./src/index.js?");
 
 /***/ })
 

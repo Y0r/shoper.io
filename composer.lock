@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4bae1da23153fe5913ce025be4d296a6",
+    "content-hash": "36676b46d0caf63a605d68a36b71cf16",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -747,6 +747,54 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/adminimal_admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/adminimal_admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/anonymous_token",
+            "version": "2.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/anonymous_token.git",
+                "reference": "2.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/anonymous_token-2.0.0-beta3.zip",
+                "reference": "2.0.0-beta3",
+                "shasum": "e71808ba2db6194072562e1627a26a0580ad66fd"
+            },
+            "require": {
+                "drupal/core": "^8.8.3 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta3",
+                    "datestamp": "1605646289",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "NikolayYenbakhtov",
+                    "homepage": "https://www.drupal.org/user/3559339"
+                },
+                {
+                    "name": "baikho",
+                    "homepage": "https://www.drupal.org/user/2727459"
+                }
+            ],
+            "description": "Add token validation to all forms (anti-CSRF token) for anonymous users",
+            "homepage": "https://www.drupal.org/project/anonymous_token",
+            "support": {
+                "source": "https://git.drupalcode.org/project/anonymous_token"
             }
         },
         {
@@ -6040,6 +6088,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/anonymous_token": 10,
         "drupal/flag": 10,
         "drupal/group": 10
     },

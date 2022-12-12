@@ -8,12 +8,11 @@ dependencies:
     - field.field.node.bag.field_list
     - field.field.node.bag.field_tags
     - node.type.bag
-    - views.view.bag_members_list
   module:
     - layout_builder
+    - shp_share
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -24,59 +23,8 @@ third_party_settings:
         layout_settings:
           label: Main
           context_mapping: {  }
-          column_widths: 75-25
+          column_widths: 67-33
         components:
-          9ca1994c-2b4f-4847-8da0-2c14cb3cc65a:
-            uuid: 9ca1994c-2b4f-4847-8da0-2c14cb3cc65a
-            region: second
-            configuration:
-              id: 'views_block:bag_members_list-list_block'
-              label: ''
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 1
-            additional: {  }
-          66ba3c07-cda1-47b0-85fc-0bb1f139e214:
-            uuid: 66ba3c07-cda1-47b0-85fc-0bb1f139e214
-            region: second
-            configuration:
-              id: 'field_block:node:bag:field_bag_type'
-              label: 'Bag Type'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          7797f8b5-4b3b-4cc9-8461-1ac9f3d412fb:
-            uuid: 7797f8b5-4b3b-4cc9-8461-1ac9f3d412fb
-            region: second
-            configuration:
-              id: 'field_block:node:bag:field_tags'
-              label: Tags
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
           1d76e261-d6f5-4a26-8f6e-8c38f7b03f43:
             uuid: 1d76e261-d6f5-4a26-8f6e-8c38f7b03f43
             region: second
@@ -108,7 +56,56 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 0
+            weight: 1
+            additional: {  }
+          bc4485ef-9833-45a4-b72f-2a71b219b443:
+            uuid: bc4485ef-9833-45a4-b72f-2a71b219b443
+            region: second
+            configuration:
+              id: shp_share_group_members_block
+              label: 'Group members block'
+              label_display: '0'
+              provider: shp_share
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+          7797f8b5-4b3b-4cc9-8461-1ac9f3d412fb:
+            uuid: 7797f8b5-4b3b-4cc9-8461-1ac9f3d412fb
+            region: first
+            configuration:
+              id: 'field_block:node:bag:field_tags'
+              label: Tags
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          66ba3c07-cda1-47b0-85fc-0bb1f139e214:
+            uuid: 66ba3c07-cda1-47b0-85fc-0bb1f139e214
+            region: first
+            configuration:
+              id: 'field_block:node:bag:field_bag_type'
+              label: 'Bag Type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
             additional: {  }
         third_party_settings: {  }
 id: node.bag.default

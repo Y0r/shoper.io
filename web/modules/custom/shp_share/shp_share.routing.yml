@@ -1,0 +1,11 @@
+shp_share.group.link_invitation:
+  path: '/bag/{bag}/share'
+  defaults:
+    _title: 'Share bag with friends or family'
+    _controller: '\Drupal\shp_share\Controller\InvitationController::share'
+  requirements:
+    _custom_access: '\Drupal\shp_share\Controller\InvitationController::access'
+  options:
+    parameters:
+      bag:
+        type: entity:node
