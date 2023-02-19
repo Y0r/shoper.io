@@ -2,7 +2,7 @@ _core:
   default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8
 favicon:
   mimetype: image/png
-  path: 'public://shopping_bag_icon_192682 (1).png'
+  path: 'public://shopping_bag_icon_192682 (1)_1.png'
   url: ''
   use_default: false
 features:
@@ -11,6 +11,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://shopping_bag_icon_192682 (2).png'
+  path: 'public://shopping_bag_icon_192682 (2)_1.png'
   url: ''
   use_default: false

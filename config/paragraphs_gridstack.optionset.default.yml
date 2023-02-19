@@ -1,0 +1,13 @@
+uuid: bd22d0a4-8c6d-4dfc-a8a5-1e3452003a01
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: koL3WkydlCcFs6sMAPhUz--VVsLXj7e_9TIW8K_nuGw
+id: default
+label: Default
+float: true
+allow_custom_class: false
+allow_rounded_class: true
+breakpoints_provider: paragraphs_gridstack
+template: null
