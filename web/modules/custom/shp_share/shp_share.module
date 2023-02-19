@@ -36,3 +36,27 @@ function shp_share_node_presave(NodeInterface $node): void {
     $group->save();
   }
 }
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function shp_share_node_delete(NodeInterface $node): void {
+  if ($node->bundle() === 'bag') {
+    $bag = $node;
+
+    /** @var \Drupal\group\Entity\GroupInterface $groups */
+    $groups = \Drupal::entityTypeManager()
+      ->getStorage('group')
+      ->loadByProperties([
+        'type' => 'bag_members',
+        'field_bag' => $bag->id(),
+        'status' => 1,
+      ]);
+
+    if (!empty($groups)) {
+      foreach ($groups as $group) {
+        $group->delete();
+      }
+    }
+  }
+}
