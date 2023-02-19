@@ -11,7 +11,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  ckeditor: 0
+  ckeditor5: 0
   coffee: 0
   comment: 0
   config: 0
@@ -49,7 +49,6 @@ module:
   pwa: 0
   pwa_a2hs: 0
   pwa_extras: 0
-  rdf: 0
   search: 0
   shortcut: 0
   shp_access: 0
