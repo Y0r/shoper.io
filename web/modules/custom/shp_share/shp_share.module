@@ -9,16 +9,19 @@ use Drupal\node\NodeInterface;
 function shp_share_node_presave(NodeInterface $node): void {
   if ($node->bundle() === 'bag') {
     $bag = $node;
-    $groups = \Drupal::entityTypeManager()
-      ->getStorage('group')
-      ->loadByProperties([
-        'type' => 'bag_members',
-        'field_bag' => $bag->id(),
-        'status' => 1,
-      ]);
 
-    if (!empty($groups)) {
-      return;
+    if (!$bag->isNew()) {
+      $groups = \Drupal::entityTypeManager()
+        ->getStorage('group')
+        ->loadByProperties([
+          'type' => 'bag_members',
+          'field_bag' => $bag->id(),
+          'status' => 1,
+        ]);
+
+      if (!empty($groups)) {
+        return;
+      }
     }
 
     $group = \Drupal::entityTypeManager()
