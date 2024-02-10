@@ -292,7 +292,7 @@ display:
         type: infinite_scroll
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 50
           total_pages: null
           id: 0
           tags:
@@ -700,8 +700,19 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        relationships: false
         filters: false
         filter_groups: false
+      relationships:
+        field_bag_type:
+          id: field_bag_type
+          table: node__field_bag_type
+          field: field_bag_type
+          relationship: none
+          group_type: group
+          admin_label: 'field_bag_type: Taxonomy term'
+          plugin_id: standard
+          required: true
       display_description: ''
       use_more: true
       use_more_always: false

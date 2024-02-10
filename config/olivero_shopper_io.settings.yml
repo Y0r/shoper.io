@@ -2,10 +2,10 @@ features:
   node_user_picture: 1
   comment_user_picture: 1
   comment_user_verification: 1
-  favicon: 1
+  favicon: 0
 logo:
   use_default: 0
-  path: ''
+  path: 'public://shopping_bag_icon_192682 (1)_1.png'
 favicon:
   use_default: 0
   path: ''
