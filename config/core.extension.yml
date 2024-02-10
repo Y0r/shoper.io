@@ -3,7 +3,6 @@ _core:
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  adminimal_admin_toolbar: 0
   anonymous_token: 0
   automated_cron: 0
   backup_migrate: 0
@@ -29,6 +28,7 @@ module:
   filter: 0
   flag: 0
   flexible_permissions: 0
+  gin_toolbar: 0
   group: 0
   help: 0
   history: 0
@@ -50,6 +50,7 @@ module:
   pwa_a2hs: 0
   pwa_extras: 0
   search: 0
+  shield: 0
   shortcut: 0
   shp_access: 0
   shp_share: 0
@@ -73,4 +74,5 @@ theme:
   olivero: 0
   claro: 0
   olivero_shopper_io: 0
+  gin: 0
 profile: standard
