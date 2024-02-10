@@ -31,6 +31,8 @@ web/README.txt
 web/robots.txt
 web/update.php
 web/web.config
+web/INSTALL.txt
+web/.ht.router.php
 
 # Ignore specific configuration
 config/ath_courts.import_courts.batch.yml
