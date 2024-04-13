@@ -76,7 +76,8 @@ web/themes/contrib/**
 # Packages #
 *.7z
 *.dmg
-*.gz
+# Commented to commit backups.
+#*.gz
 *.bz2
 *.iso
 *.jar
