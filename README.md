@@ -1,19 +1,21 @@
 # shoper.io
 
-### Stack
+## Stack
 
 The default stack with d4d. Nothing special.
 The database files and public files backups in /source folder.
 
-### Access
+## Access
 
-// Site accountes.
-PoseIDon
-vYN8PbiCAuGni3z
+### Site users
 
-Yuri Panchuk
-yu0302fr00
+Login: PoseIDon
+Password: vYN8PbiCAuGni3z
 
-// Shield.
-Y0r
-kik
+Login: Yuri Panchuk
+Password: yu0302fr00
+
+### Shield
+
+Login: Y0r
+Password: kik
