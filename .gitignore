@@ -107,8 +107,8 @@ Thumbs.db
 !core/**/*.gz
 
 # Docker4Drupal files
-.env
-docker-compose.yml
+#.env
+#docker-compose.yml
 mariadb-init
 
 # IDE files
