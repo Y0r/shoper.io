@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Bag Type'
 vid: bag_type
-description: ''
+description: null
 weight: 0
+new_revision: false

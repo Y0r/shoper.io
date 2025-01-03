@@ -2,4 +2,4 @@ name: SHP Share
 description: Provides custom functionality to share access to the entity.
 package: Custom
 type: module
-core_version_requirement: ^9
+core_version_requirement: ^10 || ^11

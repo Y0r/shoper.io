@@ -2,4 +2,4 @@ name: SHP Access
 description: Provides custom functionality for access check.
 package: Custom
 type: module
-core_version_requirement: ^9
+core_version_requirement: ^10 || ^11

@@ -1,17 +1,18 @@
 _core:
   default_config_hash: FLJZME3II5fjmMSrdEvJHp95ZJf8V_X0jbX0VdVU1BU
-shield_enable: true
+langcode: en
+shield_enable: false
 credential_provider: shield
 credentials:
   shield:
-    user: Y0r
-    pass: kik
+    user: null
+    pass: null
 allow_cli: true
 debug_header: false
 unset_basic_auth_headers: true
 print: 'Шо там?'
 method: 0
 paths: ''
-allowlist: ''
+allowlist: null
 http_method_allowlist: {  }
 domains: ''

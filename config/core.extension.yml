@@ -34,6 +34,7 @@ module:
   history: 0
   image: 0
   layout_builder: 0
+  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   link: 0
   menu_link_content: 0
@@ -46,9 +47,11 @@ module:
   paragraphs_gridstack: 0
   path: 0
   path_alias: 0
+  phpass: 0
   pwa: 0
   pwa_a2hs: 0
   pwa_extras: 0
+  pwa_service_worker: 0
   search: 0
   shield: 0
   shortcut: 0
@@ -60,10 +63,8 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   update: 0
   user: 0
-  variationcache: 0
   views_infinite_scroll: 0
   views_ui: 0
   pathauto: 1

@@ -12,5 +12,5 @@ features:
   node_user_picture: true
 logo:
   path: 'public://shopping_bag_icon_192682 (2)_1.png'
-  url: ''
+  url: null
   use_default: false
